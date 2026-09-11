@@ -6,6 +6,7 @@
 
 **The launch page did its job in 200 milliseconds. It can fuck off now.**
 
+[![release](https://img.shields.io/github/v/release/Locke-Werks/FuckOffZoom?style=flat-square&color=d6262a)](https://github.com/Locke-Werks/FuckOffZoom/releases)
 [![license](https://img.shields.io/badge/license-GPLv3-d6262a?style=flat-square)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-Chrome-d6262a?style=flat-square)](#install)
 [![manifest](https://img.shields.io/badge/manifest-v3-d6262a?style=flat-square)](manifest.json)
