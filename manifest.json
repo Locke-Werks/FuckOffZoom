@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "FuckOffZoom",
+  "version": "1.0.0",
+  "description": "Closes the Zoom launch tab a few seconds after it hands the meeting to the desktop client.",
+  "minimum_chrome_version": "102",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "FuckOffZoom",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["tabs", "storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.zoom.us/j/*",
+        "*://*.zoom.us/s/*",
+        "*://*.zoom.us/w/*",
+        "*://*.zoom.us/my/*",
+        "*://*.zoom.us/launch/*",
+        "*://*.zoom.us/postattendee*",
+        "*://*.zoomgov.com/j/*",
+        "*://*.zoomgov.com/s/*",
+        "*://*.zoomgov.com/w/*",
+        "*://*.zoomgov.com/my/*",
+        "*://*.zoomgov.com/launch/*",
+        "*://*.zoomgov.com/postattendee*"
+      ],
+      "js": ["common.js", "content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}
